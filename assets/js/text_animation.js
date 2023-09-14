@@ -8,8 +8,8 @@ function tm_animate_text() {
 
 	animateSpan.typed({
 		strings: [
-			"Electrifying Logistics",
-			"Sustainable Future"
+			// "Electrifying Logistics",
+			// "Sustainable Future"
 			// "Delivery",
 			//  "Marketing",
 			//   "Advertising"
