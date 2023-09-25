@@ -46,6 +46,12 @@
     </div>
     <!-- preloader -->
 
+
+    <!-- ========== Modal =========== -->
+    <div class="abc">
+    </div>
+    <!-- ============================ -->
+
     <!-- page-direction -->
     <!-- <div class="page_direction">
         <div class="demo-rtl direction_switch"><button class="rtl">RTL</button></div>
@@ -239,7 +245,7 @@
 
                 </p>
 
-                <a href="https://forms.gle/KcuADWEXmqGfdByS7" class="btn btn-success mt-5">Apply Now</a>
+                <a href="#" onclick=addModal() class="btn btn-success mt-5">Apply Now</a>
             </div>
         </div>
     </div>
@@ -354,6 +360,25 @@
 
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
+    <script>
+        const removeModal = () => {
+            $(".abc").removeClass("scanner-modal").children().remove()
+        }
+        const addModal = () => {
+            console.log("connected")
+            $(".abc").addClass("scanner-modal");
+            const modal = `
+                <div class="scanner-modal d-flex justify-content-center align-items-center">
+                    <div class="custom-card d-flex justify-content-center">
+                        <button type="button" class="btn-close-close" onclick=removeModal() >&times;</button >
+                            <a href="www.qr-code-generator.com/" border="0" style="cursor:default" rel="nofollow"></a><img src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fforms.gle%2FBzz2SfRiPbPF6rX79&chs=180x180&choe=UTF-8&chld=L|2">
+		
+	</div>
+                </div>`
+            $(".scanner-modal").append(modal)
+
+        }
+    </script>
 
 </body><!-- End of .page_wrapper -->
 

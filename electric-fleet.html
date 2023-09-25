@@ -46,6 +46,12 @@
     </div>
     <!-- preloader -->
 
+    <!-- ========== Modal =========== -->
+    <div class="abc d-flex justify-content-center align-items-center">
+
+    </div>
+    <!-- ============================ -->
+
     <!-- page-direction -->
     <!-- <div class="page_direction">
         <div class="demo-rtl direction_switch"><button class="rtl">RTL</button></div>
@@ -196,8 +202,8 @@
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias delectus
                         doloremque perspiciatis quod, ad suscipit quae consequatur iusto sed exercitationem explicabo
                         voluptatum ex alias nisi dolorem, optio quasi ipsa?</p>
-                    <a href="https://forms.gle/N9wHxXHhg1qDYgBZA" class="btn btn-success"
-                        style="align-items: end;">Connect Now</a>
+                    <a href="#" onclick=addModal() class="btn btn-success connect-btn" style="align-items: end;">Connect
+                        Now</a>
                     <!-- <a href="#" class="btn btn-primary" style="align-items: end;">Edit</a>
                     <a href="#" class="btn btn-danger" style="align-items: end;">Delete</a> -->
                 </div>
@@ -213,7 +219,8 @@
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias delectus
                         doloremque perspiciatis quod, ad suscipit quae consequatur iusto sed exercitationem explicabo
                         voluptatum ex alias nisi dolorem, optio quasi ipsa?</p>
-                    <a href="https://forms.gle/N9wHxXHhg1qDYgBZA" class="btn btn-success">Connect Now</a>
+                    <a href="#" onclick=addModal() class="btn btn-success connect-btn" style="align-items: end;">Connect
+                        Now</a>
                 </div>
             </div>
         </div>
@@ -227,7 +234,8 @@
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias delectus
                         doloremque perspiciatis quod, ad suscipit quae consequatur iusto sed exercitationem explicabo
                         voluptatum ex alias nisi dolorem, optio quasi ipsa?</p>
-                    <a href="https://forms.gle/N9wHxXHhg1qDYgBZA" class="btn btn-success">Connect Now</a>
+                    <a href="#" onclick=addModal() class="btn btn-success connect-btn" style="align-items: end;">Connect
+                        Now</a>
                 </div>
             </div>
         </div>
@@ -241,7 +249,8 @@
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias delectus
                         doloremque perspiciatis quod, ad suscipit quae consequatur iusto sed exercitationem explicabo
                         voluptatum ex alias nisi dolorem, optio quasi ipsa?</p>
-                    <a href="https://forms.gle/N9wHxXHhg1qDYgBZA" class="btn btn-success">Connect Now</a>
+                    <a href="#" onclick=addModal() class="btn btn-success connect-btn" style="align-items: end;">Connect
+                        Now</a>
                 </div>
             </div>
         </div>
@@ -357,6 +366,25 @@
 
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
+    <script>
+        const removeModal = () => {
+            $(".abc").removeClass("scanner-modal").children().remove()
+        }
+        const addModal = () => {
+            console.log("connected")
+            $(".abc").addClass("scanner-modal");
+            const modal = `
+                <div class="scanner-modal d-flex justify-content-center align-items-center">
+                    <div class="custom-card d-flex justify-content-center">
+                        <button type="button" class="btn-close-close" onclick=removeModal() >&times;</button >
+                            <img src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fforms.gle%2FiskRR52P6YZSwW7V7&chs=180x180&choe=UTF-8&chld=L|2" alt="qr code"><a href="www.qr-code-generator.com/" border="0" style="cursor:default" rel="nofollow"></a>
+		
+	</div>
+                </div>`
+            $(".scanner-modal").append(modal)
+
+        }
+    </script>
 
 </body><!-- End of .page_wrapper -->
 
